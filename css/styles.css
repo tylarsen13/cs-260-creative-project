@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.bg-light {
+    background-color: #ff564a !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 56px);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.car-container .card {
+    min-width: 200px;
+}
+
+.add-vehicle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer {
+    display: flex;
+    background-color: #17191b;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, .5);
+    padding: 10px;
+    font-size: 14px;
+}
+
+.car-image {
+    width: 60%;
+}
