@@ -71,10 +71,16 @@ html, body {
 
 .car-info {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     margin: 20px 0;
 }
 
 .login-form {
     margin-top: 15px;
+}
+
+.add-vehicle-form {
+    margin-bottom: 20px;
 }
