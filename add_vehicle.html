@@ -22,42 +22,39 @@
                 <a class="nav-link" href="index.html">Home
                     <span class="sr-only">(current)</span>
                 </a>
-                <a class="nav-link" href="add_vehicle.html">Add Vehicle</a>
+                <a class="nav-link active" href="add_vehicle.html">Add Vehicle</a>
             </div>
             <a class="btn btn-light my-2 my-sm-0 pull-right" type="submit" href="login.html">Log In</a>
         </div>
     </nav>
 
     <div class="page">
-
         <div class="content">
-            <h1 class="page-title">Mercedes Benz</h1>
-            <h3>2016</h3>
-            <img src="images/car1.jpg" class="car-image" />
-            <div class="car-info">
-                <ul class="list-group mt-2">
-                    <li class="list-group-item active">Basic Info</li>
-                    <li class="list-group-item">
-                        <strong>Odometer:</strong> 234,634</li>
-                    <li class="list-group-item">
-                        <strong>Total Cost:</strong> $34,584</li>
-                    <li class="list-group-item">
-                        <strong>Gas Mileage:</strong> 34 MPG</li>
-                    <li class="list-group-item">
-                        <strong>License Plate: </strong> 1L1KT</li>
-                </ul>
-                <ul class="list-group mt-2">
-                    <li class="list-group-item active">Maintenance Schedule</li>
-                    <li class="list-group-item">
-                        <strong>Oil Change:</strong> May 20th, 2021</li>
-                    <li class="list-group-item">
-                        <strong>Tire Rotation:</strong> April 21st, 2021</li>
-                    <li class="list-group-item">
-                        <strong>Check Tire Pressure:</strong> November 20th, 2020</li>
-                    <li class="list-group-item">
-                        <strong>Fluids Check:</strong> October 31st, 2020</li>
-                </ul>
-            </div>
+            <h1 class="page-title">Add Vehicle</h1>
+            <form>
+                <div class="form-group">
+                    <label for="make">Vehicle Make/Model</label>
+                    <input type="email" class="form-control" id="make" aria-describedby="makeHelp">
+                    <small id="makeHelp" class="form-text text-muted">Ex: Hyundai Accent</small>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="number" class="form-control" id="year">
+                </div>
+                <div class="form-group">
+                    <label for="miles">Miles</label>
+                    <input type="number" class="form-control" id="miles">
+                </div>
+                <div class="form-group">
+                    <label for="license_plate">License Plate</label>
+                    <input type="text" class="form-control" id="license_plate">
+                </div>
+                <div class="form-group">
+                    <label for="gas">Gas Mileage</label>
+                    <input type="text" class="form-control" id="gas">
+                </div>
+                <a type="submit" class="btn btn-primary" href="index.html">Submit</a>
+            </form>
         </div>
         <div class="footer">
             <div>&copy;2020 Vehicle Maintenance Tracker</div>
