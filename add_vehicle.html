@@ -1,75 +1,111 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="/css/styles.css" />
+      <title>Vehicle Maintenance Tracker</title>
+   </head>
 
-<head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css" />
-    <title>Vehicle Maintenance Tracker</title>
-</head>
-
-<body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Vehicle Maintenance Tracker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
+   <body>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="index.html">Vehicle Maintenance Tracker</a>
+         <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+         >
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mr-auto">
-                <a class="nav-link" href="index.html">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-                <a class="nav-link active" href="add_vehicle.html">Add Vehicle</a>
+               <a class="nav-link" href="index.html"
+                  >Home
+                  <span class="sr-only">(current)</span>
+               </a>
+               <a class="nav-link active" href="add_vehicle.html">Add Vehicle</a>
             </div>
             <a class="btn btn-light my-2 my-sm-0 pull-right" type="submit" href="login.html">Log In</a>
-        </div>
-    </nav>
+         </div>
+      </nav>
 
-    <div class="page">
-        <div class="content">
+      <div class="page">
+         <div class="content">
             <h1 class="page-title">Add Vehicle</h1>
             <form class="add-vehicle-form">
-                <div class="form-group">
-                    <label for="make">Vehicle Make/Model</label>
-                    <input type="email" class="form-control" id="make" aria-describedby="makeHelp">
-                    <small id="makeHelp" class="form-text text-muted">Ex: Hyundai Accent</small>
-                </div>
-                <div class="form-group">
-                    <label for="year">Year</label>
-                    <input type="number" class="form-control" id="year">
-                </div>
-                <div class="form-group">
-                    <label for="miles">Miles</label>
-                    <input type="number" class="form-control" id="miles">
-                </div>
-                <div class="form-group">
-                    <label for="license_plate">License Plate</label>
-                    <input type="text" class="form-control" id="license_plate">
-                </div>
-                <div class="form-group">
-                    <label for="gas">Gas Mileage</label>
-                    <input type="text" class="form-control" id="gas">
-                </div>
-                <a type="submit" class="btn btn-primary" href="index.html">Submit</a>
+               <!-- <div class="form-group">
+                  <label for="make">Vehicle Make/Model</label>
+                  <input type="email" class="form-control" id="make" aria-describedby="makeHelp" />
+                  <small id="makeHelp" class="form-text text-muted">Ex: Hyundai Accent</small>
+               </div> -->
+               <div class="form-group">
+                  <label for="vehicleMake">Vehicle Make</label>
+                  <select class="form-control" id="vehicleMake"> </select>
+               </div>
+               <div class="form-group">
+                  <label for="vehicleModel">Vehicle Model</label>
+                  <select class="form-control" id="vehicleModel"> </select>
+               </div>
+               <div>
+                  <label>Vehicle Type: <span id="vehicleType"></span></label>
+               </div>
+               <div class="form-group">
+                  <label for="year">Year</label>
+                  <input type="number" class="form-control" id="year" />
+               </div>
+               <div class="form-group">
+                  <label for="miles">Miles</label>
+                  <input type="number" class="form-control" id="miles" />
+               </div>
+               <div class="form-group">
+                  <label for="license_plate">License Plate</label>
+                  <input type="text" class="form-control" id="license_plate" />
+               </div>
+               <div class="form-group">
+                  <label for="gas">Gas Mileage</label>
+                  <input type="text" class="form-control" id="gas" />
+               </div>
+               <a type="submit" class="btn btn-primary" href="index.html">Submit</a>
             </form>
-        </div>
-        <div class="footer">
+         </div>
+         <div class="footer">
             <div>&copy;2020 Vehicle Maintenance Tracker</div>
             <div>
-                <a href="https://github.com/tylarsen13/cs-260-creative-project">GitHub Repo</a>
+               <a href="https://github.com/tylarsen13/cs-260-creative-project">GitHub Repo</a>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-</body>
-
+      <script
+         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"
+         integrity="sha256-ur/YlHMU96MxHEsy3fHGszZHas7NzH4RQlD4tDVvFhw="
+         crossorigin="anonymous"
+      ></script>
+      <script src="add_vehicle.js"></script>
+   </body>
 </html>
